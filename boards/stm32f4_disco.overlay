@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) David Ullmann
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include "zephyr/dt-bindings/gpio/gpio.h"
+
+/ {
+    aliases {
+        ir-receiver = &ir_receiver_gpio;
+    };
+
+    gpio_keys {
+        compatible = "gpio-keys";
+        ir_receiver_gpio: ir_receiver_gpio {
+            gpios = <&gpiod 8 GPIO_ACTIVE_LOW>;
+        };
+    };
+};
+

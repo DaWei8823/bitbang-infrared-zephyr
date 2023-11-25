@@ -1,0 +1,7 @@
+device STM32F407VE 
+SelectInterface JTAG 
+JTAGConf -1,-1 
+Speed 4000 
+connect 
+LoadFile build/zephyr/zephyr.hex 
+exit
